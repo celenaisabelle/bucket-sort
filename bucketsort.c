@@ -1,3 +1,9 @@
+/*
+ * gcc -Wall -Wextra -o bucketsort bucketsort.c
+ *
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -47,7 +53,7 @@ int main(int argc, char* argv[]) {
 
     int num_buckets = argc;
     bucket* buckets = (bucket*)malloc(num_buckets * sizeof(bucket));
-    buckets[0].min_word = "";
+    buckets[0].min_word = strdup("");
     buckets[0].head = NULL;
 
     for (int i = 1; i < argc; i++) {
